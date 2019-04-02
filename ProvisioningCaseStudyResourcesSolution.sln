@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ProvisioningKVResources", "ProvisioningKVResources\ProvisioningKVResources.deployproj", "{CE67E007-D4C4-4294-B26B-1F9A77ED420D}"
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "ProvisioningSQLResources", "ProvisioningSQLResources\ProvisioningSQLResources.deployproj", "{B061929C-618C-4D30-A4D1-FD81C7570B7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CE67E007-D4C4-4294-B26B-1F9A77ED420D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE67E007-D4C4-4294-B26B-1F9A77ED420D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE67E007-D4C4-4294-B26B-1F9A77ED420D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B061929C-618C-4D30-A4D1-FD81C7570B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B061929C-618C-4D30-A4D1-FD81C7570B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B061929C-618C-4D30-A4D1-FD81C7570B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B061929C-618C-4D30-A4D1-FD81C7570B7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
