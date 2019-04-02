@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "keyVaultName": {
+      "value": "iomegakvv2"
+    },
+    "objectId": {
+      "value": "fd67e9d5-ac0e-49bb-a946-2ca213424cdf"
+    },
+    "secretName": {
+      "value": "sqlpassword"
+    }
+  }
+}
