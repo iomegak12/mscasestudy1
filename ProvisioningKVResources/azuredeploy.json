@@ -101,6 +101,18 @@
       "metadata": {
         "description": "Specifies the value of the secret that you want to create."
       }
+    },
+    "acrSecretName": {
+      "type": "string",
+      "metadata": {
+        "description": "Specifies the name of the secret that you want to create."
+      }
+    },
+    "acrSecretValue": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Specifies the value of the secret that you want to create."
+      }
     }
   },
   "resources": [
@@ -120,7 +132,7 @@
             "tenantId": "[parameters('tenantId')]",
             "permissions": {
               "keys": "[parameters('keysPermissions')]",
-              "secrets": "[parameters('secretsPermissions')]"      
+              "secrets": "[parameters('secretsPermissions')]"
             }
           }
         ],
@@ -146,6 +158,18 @@
       ],
       "properties": {
         "value": "[parameters('secretValue')]"
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "name": "[concat(parameters('keyVaultName'), '/', parameters('acrSecretName'))]",
+      "apiVersion": "2018-02-14",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]"
+      ],
+      "properties": {
+        "value": "[parameters('acrSecretValue')]"
       }
     }
   ]

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "containerGroupName": { "value": "iomegacontainergroupv2" },
+    "image": {
+      "value": "iomegacontainerregistry.azurecr.io/mscontainersdevops:latest"
+    },
+    "port": { "value": "80" },
+    "dbConnectionString": {
+      "value": "ZGF0YSBzb3VyY2U9aW9tZWdhc3Fsc2VydmVydjIuZGF0YWJhc2Uud2luZG93cy5uZXQ7dXNlciBpZD1pb21lZ2FhZG1pbjtwYXNzd29yZD1QcmVzdGlnZTEyMyQkO2luaXRpYWwgY2F0YWxvZz1pb21lZ2FzcWxkYXRhYmFzZXYyOw=="
+    },
+    "imageServer": {
+      "value": "iomegacontainerregistry.azurecr.io"
+    },
+    "imageServerUserName": {
+      "value": "iomegacontainerregistry"
+    },
+    "imageServerPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/7293f3cb-5705-4319-a0cc-15472af46eed/resourceGroups/iomegaresourcegroup/providers/Microsoft.KeyVault/vaults/iomegakvv2"
+        },
+        "secretName": "acrpassword"
+      }
+    }
+  }
+}
